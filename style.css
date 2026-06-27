@@ -104,10 +104,10 @@ header h1 {
 }
 
 /* View button in rose */
-.view-btn { background: linear-gradient(145deg, #ff6f91, #ff4d6d); color: #fff; border: none; }
+.view-btn { background: linear-gradient(145deg, #ff6f91, #ff4d6d); color: #e93eb0; border: none; }
 
 /* Buy button glassy droplet */
-.buy-btn { background: rgba(255,255,255,0.25); color: #27ae60; border: 1px solid rgba(255,255,255,0.35); }
+.buy-btn { background: rgba(255,255,255,0.25); color: #e24cc9; border: 1px solid rgba(255,255,255,0.35); }
 
 /* Read button orange */
 .read-btn { background: linear-gradient(145deg, #ff9f43, #e67e22); color: #fff; border: none; }
