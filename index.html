@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SARA Book Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Smart iOS-style Header -->
+  <header>
+    <img src="pfp.jpeg" class="author-photo" alt="Author Photo">
+    <h1>Infinity of Love</h1>
+  </header>
+
+  <!-- Announcement Bar -->
+  <div class="news-bar">
+    <div class="news-text">
+      <div class="announcement" id="announcementBar">📢  : Wait for the THATS WHY I LOVE ✨</div>
+    </div>
+  </div>
+
+  <!-- Slideshow -->
+  <div class="slideshow">
+    <div class="slides">
+      <img src="madara cover page copy.jpeg" alt="Cover of MADAARA" class="slide active">
+      <img src="so that cover page.jpeg" alt="Cover of So That’s How Love Is" class="slide">
+      <img src="that why i love cover page.jpeg" alt="Cover of That’s Why I Love" class="slide">
+    </div>
+    <div class="bubble-nav" id="bubbleNav">
+      <span data-index="0" class="active"></span>
+      <span data-index="1"></span>
+      <span data-index="2"></span>
+    </div>
+  </div>
+  <!-- Slideshow Script -->
+  <script>
+    const slides = document.querySelectorAll(".slide");
+    const dots = document.querySelectorAll("#bubbleNav span");
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      slides.forEach(s => s.classList.remove("active"));
+      dots.forEach(d => d.classList.remove("active"));
+      slides[index].classList.add("active");
+      dots[index].classList.add("active");
+      currentIndex = index;
+    }
+
+    dots.forEach(dot => {
+      dot.addEventListener("click", () => showSlide(parseInt(dot.dataset.index)));
+    });
+
+    setInterval(() => {
+      showSlide((currentIndex + 1) % slides.length);
+    }, 7000);
+  </script>
+
+<!-- Manual Book Grid -->
+<section class="book-grid">
+  <!-- First Book -->
+  <div class="book-card">
+    <img src="so that cover page.jpeg" alt="ithin ehemayi adare hati">
+    <h3>So That How Love Is...</h3>
+    <p class="price">Rs.700.00</p>
+    <div class="book-buttons">
+      <button class="view-btn">View</button>
+      <a href="https://readershub.lk/product/%e0%b6%89%e0%b6%ad%e0%b7%92%e0%b6%b1%e0%b7%8a-%e0%b6%91%e0%b7%84%e0%b7%99%e0%b6%b8%e0%b6%ba%e0%b7%92-%e0%b6%86%e0%b6%af%e0%b6%bb%e0%b7%9a-%e0%b7%84%e0%b7%90%e0%b6%a7%e0%b7%92-ithin-ehemai-adare-heti/" 
+         target="_blank" class="buy-btn">Buy</a>
+    </div>
+  </div>
+
+  <!-- Second Book -->
+  <div class="book-card">
+    <img src="that why i love cover page.jpeg" alt="e nisayi mn adare">
+    <h3>Thats Why I Love</h3>
+    <p class="price">Rs.1200.00</p>
+    <div class="book-buttons">
+      <button class="view-btn">View</button>
+      <a href="https://wa.me/94707394526?text=Hi%20I%20want%20to%20buy%20Thats%20Why%20I%20Love%20book%0AName:%0AAdress:" 
+         target="_blank" class="buy-btn">Buy</a>
+    </div>
+  </div>
+
+  <!-- Third Book -->
+  <div class="book-card">
+    <img src="madara cover page.jpeg" alt="madara">
+    <h3>Madara</h3>
+    <p class="price">Free</p>
+    <div class="book-buttons">
+      <button class="view-btn">View</button>
+      <a href="https://www.wattpad.com/story/412340259?utm_source=android&utm_medium=link&utm_content=story_info&wp_page=story_details_button&wp_uname=KaVuRi" 
+         target="_blank" class="buy-btn">Read</a>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Newsletter -->
+  <div class="newsletter">
+    <h2>📩 Stay Updated</h2>
+    <p>Get exclusive offers and new releases directly to your inbox.</p>
+    <form class="newsletter-form" action="/subscribe" method="POST">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+  <!-- WhatsApp Contact Section -->
+  <section class="contact">
+    <h2>📞 Contact Us</h2>
+    <p>Have questions? Chat with us directly on WhatsApp!</p>
+    <a href="https://wa.me/+94707394526?text=Hello%20SARA%20Book%20Store%2C%20I%20want%20to%20know%20more%20about%20your%20books!" 
+       target="_blank" class="whatsapp-btn">
+      💬 Chat on WhatsApp
+    </a>
+  </section>
+
+  <!-- Social Media Connectivity -->
+  <section class="social-connect">
+    <h2>🌐 Connect With Us</h2>
+    <p>Follow SARA Book Store on social media for updates and offers.</p>
+    <div class="social-icons">
+      <a href="https://facebook.com/YourPage" target="_blank"><img src="fb.png" alt="Facebook Logo"></a>
+      <a href="https://instagram.com/YourPage" target="_blank"><img src="insta.png" alt="Instagram Logo"></a>
+      <a href="https://linkedin.com/company/YourPage" target="_blank"><img src="linkdn.png" alt="LinkedIn Logo"></a>
+      <a href="https://tiktok.com/@YourPage" target="_blank"><img src="tt.jpg" alt="TikTok Logo"></a>
+      <a href="https://x.com/YourPage" target="_blank"><img src="X.jpg" alt="X Logo"></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2026 SARA Book Store — All Rights Reserved<br><br>
+    Web Development Credit goes to Prince Web Developments.
+  </footer>
+</body>
+</html>

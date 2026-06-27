@@ -1,0 +1,41 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+section {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  background: #fbc2eb;
+  color: #000;
+  cursor: pointer;
+}
+button:hover {
+  background: #fff;
+}
+.book-card {
+  background: rgba(255,255,255,0.15);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+.book-card img {
+  width: 80px;
+  border-radius: 5px;
+}
