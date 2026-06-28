@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://infinitylove-github-io.vercel.app/sitemap.xml
