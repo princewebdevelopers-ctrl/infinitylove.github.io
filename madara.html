@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Madara</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="madara cover page.jpeg" class="author-photo" alt="Book Cover">
+    <h1>Madara</h1>
+  </header>
+
+  <section class="book-detail-section">
+    <div class="book-bubble">
+      <img src="madara cover page.jpeg" alt="Book Cover">
+    </div>
+    <div class="book-info">
+      <h2>Madara</h2>
+      <p class="description">A thrilling fantasy tale available free to read online.</p>
+      <p class="price">Free</p>
+      <div class="book-buttons">
+        <a href="https://www.wattpad.com/story/412340259" target="_blank" class="read-btn">Read</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="review-center" data-book="madara">
+    <h2>💬 Share Your Thoughts</h2>
+    <form class="review-form" id="reviewForm">
+      <textarea id="reviewText" placeholder="Write your memories or ideas..." required></textarea>
+      <input type="file" id="reviewImage" accept="image/*">
+      <button type="submit">Post Review</button>
+    </form>
+    <div class="reviews" id="reviewsList"></div>
+  </section>
+
+  <footer>© 2026 SARA Book Store — All Rights Reserved</footer>
+
+  <script src="reviews.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>That’s Why I Love</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="that why i love cover page.jpeg" class="author-photo" alt="Book Cover">
+    <h1>That’s Why I Love</h1>
+  </header>
+
+  <section class="book-detail-section">
+    <div class="book-bubble">
+      <img src="that why i love cover page.jpeg" alt="Book Cover">
+    </div>
+    <div class="book-info">
+      <h2>That’s Why I Love</h2>
+      <p class="description">An emotional exploration of why love defines our lives.</p>
+      <p class="price">Rs.1200.00</p>
+      <div class="book-buttons">
+        <a href="https://wa.me/94707394526?text=Hi%20I%20want%20to%20buy%20Thats%20Why%20I%20Love%20book%0AName:%0AAdress:" target="_blank" class="buy-btn">Buy</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="review-center" data-book="thats-why-love">
+    <h2>💬 Share Your Thoughts</h2>
+    <form class="review-form" id="reviewForm">
+      <textarea id="reviewText" placeholder="Write your memories or ideas..." required></textarea>
+      <input type="file" id="reviewImage" accept="image/*">
+      <button type="submit">Post Review</button>
+    </form>
+    <div class="reviews" id="reviewsList"></div>
+  </section>
+
+  <footer>© 2026 SARA Book Store — All Rights Reserved</footer>
+
+  <script src="reviews.js"></script>
+</body>
+</html>
+

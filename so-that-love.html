@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>So That How Love Is...</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="so that cover page.jpeg" class="author-photo" alt="Book Cover">
+    <h1>So That How Love Is...</h1>
+  </header>
+
+  <section class="book-detail-section">
+    <div class="book-bubble">
+      <img src="so that cover page.jpeg" alt="Book Cover">
+    </div>
+    <div class="book-info">
+      <h2>So That How Love Is...</h2>
+      <p class="description">A heartfelt journey exploring the nuances of love and relationships.</p>
+      <p class="price">Rs.700.00</p>
+      <div class="book-buttons">
+        <a href="https://readershub.lk/product/..." target="_blank" class="buy-btn">Buy</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="review-center" data-book="so-that-love">
+    <h2>💬 Share Your Thoughts</h2>
+    <form class="review-form" id="reviewForm">
+      <textarea id="reviewText" placeholder="Write your memories or ideas..." required></textarea>
+      <input type="file" id="reviewImage" accept="image/*">
+      <button type="submit">Post Review</button>
+    </form>
+    <div class="reviews" id="reviewsList"></div>
+  </section>
+
+  <footer>© 2026 SARA Book Store — All Rights Reserved</footer>
+
+  <!-- Dynamic Review Script -->
+  <script src="reviews.js"></script>
+</body>
+</html>
+
