@@ -8,6 +8,7 @@ body {
 }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
+/* Header */
 header {
   display: flex;
   align-items: center;
@@ -33,7 +34,7 @@ header h1 {
   margin: 0;
 }
 
-/* Announcement */
+/* Announcement Bar */
 .news-bar { 
   background: rgba(255,255,255,0.2); 
   padding: 12px; text-align: center; 
@@ -71,7 +72,7 @@ header h1 {
   transition: transform 0.3s ease;
 }
 .bubble-nav span.active { background: #fbc2eb; transform: scale(1.2); }
-/* Book grid */
+/* Book Grid */
 .book-grid { 
   display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
   gap: 25px; padding: 30px; 
@@ -86,7 +87,7 @@ header h1 {
 .book-card h3 { margin: 8px 0; }
 .price { font-size: 1em; font-weight: 600; color: #fbc2eb; }
 
-/* Buttons with equal size + water droplet effect */
+/* Buttons */
 .book-buttons {
   margin-top: 12px; display: flex; justify-content: center; gap: 14px;
 }
@@ -102,143 +103,75 @@ header h1 {
   box-shadow: inset 0 2px 6px rgba(255,255,255,0.4),
               0 6px 14px rgba(0,0,0,0.25);
 }
-
-/* View button in rose */
-.view-btn { background: linear-gradient(145deg, #ff6f91, #ff4d6d); color: #e93eb0; border: none; }
-
-/* Buy button glassy droplet */
+.view-btn { background: linear-gradient(145deg, #ff6f91, #ff4d6d); color: #fff; border: none; }
 .buy-btn { background: rgba(255,255,255,0.25); color: #e24cc9; border: 1px solid rgba(255,255,255,0.35); }
-
-/* Read button orange */
 .read-btn { background: linear-gradient(145deg, #ff9f43, #e67e22); color: #fff; border: none; }
-
-/* Hover glow */
 .book-buttons a:hover,
 .book-buttons button:hover {
   transform: translateY(-3px) scale(1.07);
   box-shadow: 0 0 18px rgba(251,194,235,0.8);
 }
+
 /* Newsletter */
 .newsletter { 
-  background: rgba(255,255,255,0.25); 
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
-  padding: 30px; 
-  margin: 40px auto; 
-  width: 70%; 
-  border-radius: 25px; 
-  text-align: center; 
+  background: rgba(255,255,255,0.25); backdrop-filter: blur(25px);
+  padding: 30px; margin: 40px auto; width: 70%; 
+  border-radius: 25px; text-align: center; 
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 .newsletter h2 { 
-  margin-bottom: 10px; 
-  font-size: 1.5em; 
+  margin-bottom: 10px; font-size: 1.5em; 
   background: linear-gradient(90deg,#fff,#fbc2eb);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
-.newsletter p { 
-  margin-bottom: 20px; 
-  font-size: 0.95em; 
-  color: rgba(255,255,255,0.85);
-}
-.newsletter-form {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
+.newsletter p { margin-bottom: 20px; font-size: 0.95em; color: rgba(255,255,255,0.85); }
+.newsletter-form { display: flex; justify-content: center; gap: 10px; }
 .newsletter-form input {
-  padding: 12px 15px;
-  border-radius: 20px;
-  border: none;
-  outline: none;
-  width: 60%;
-  background: rgba(255,255,255,0.2);
-  color: #fff;
+  padding: 12px 15px; border-radius: 20px; border: none; outline: none;
+  width: 60%; background: rgba(255,255,255,0.2); color: #fff;
 }
 .newsletter-form input::placeholder { color: rgba(255,255,255,0.7); }
 .newsletter-form button {
-  padding: 12px 20px;
-  border: none;
-  border-radius: 20px;
-  background: #fbc2eb;
-  color: #000;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  padding: 12px 20px; border: none; border-radius: 20px;
+  background: #fbc2eb; color: #000; cursor: pointer; transition: all 0.3s ease;
 }
-.newsletter-form button:hover {
-  box-shadow: 0 0 12px #fbc2eb;
-  transform: scale(1.05);
-}
-
+.newsletter-form button:hover { box-shadow: 0 0 12px #fbc2eb; transform: scale(1.05); }
 /* Contact */
 .contact {
-  text-align: center;
-  margin: 40px auto;
-  padding: 20px;
-  width: 70%;
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(20px);
-  border-radius: 25px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  text-align: center; margin: 40px auto; padding: 20px; width: 70%;
+  background: rgba(255,255,255,0.15); backdrop-filter: blur(20px);
+  border-radius: 25px; box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
 .contact h2 {
-  margin-bottom: 10px;
-  font-size: 1.4em;
+  margin-bottom: 10px; font-size: 1.4em;
   background: linear-gradient(90deg,#fff,#25D366);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
-.contact p {
-  margin-bottom: 15px;
-  color: rgba(255,255,255,0.85);
-}
+.contact p { margin-bottom: 15px; color: rgba(255,255,255,0.85); }
 .whatsapp-btn {
-  display: inline-block;
-  padding: 12px 20px;
-  border-radius: 25px;
-  background: #25D366; /* WhatsApp green */
-  color: #fff;
-  font-weight: 600;
-  text-decoration: none;
+  display: inline-block; padding: 12px 20px; border-radius: 25px;
+  background: #25D366; color: #fff; font-weight: 600; text-decoration: none;
   transition: all 0.3s ease;
 }
-.whatsapp-btn:hover {
-  background: #1ebe5d;
-  box-shadow: 0 0 12px #25D366;
-  transform: scale(1.05);
-}
-/* Social Media Connectivity */
+.whatsapp-btn:hover { background: #1ebe5d; box-shadow: 0 0 12px #25D366; transform: scale(1.05); }
+
+/* Social Media */
 .social-connect {
-  text-align: center;
-  margin: 40px auto;
-  padding: 20px;
-  width: 70%;
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(20px);
-  border-radius: 25px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  text-align: center; margin: 40px auto; padding: 20px; width: 70%;
+  background: rgba(255,255,255,0.15); backdrop-filter: blur(20px);
+  border-radius: 25px; box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
 .social-connect h2 {
-  margin-bottom: 10px;
-  font-size: 1.4em;
+  margin-bottom: 10px; font-size: 1.4em;
   background: linear-gradient(90deg,#fff,#fbc2eb);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
-.social-connect p {
-  margin-bottom: 15px;
-  color: rgba(255,255,255,0.85);
-}
+.social-connect p { margin-bottom: 15px; color: rgba(255,255,255,0.85); }
 .social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+  display: flex; justify-content: center; gap: 20px;
 }
 .social-icons img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  width: 40px; height: 40px; border-radius: 50%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .social-icons img:hover {
@@ -248,64 +181,121 @@ header h1 {
 
 /* Footer */
 footer { 
-  text-align: center; 
-  padding: 20px; 
+  text-align: center; padding: 20px; 
   background: rgba(255,255,255,0.15); 
-  border-top-left-radius: 30px; 
-  border-top-right-radius: 30px; 
+  border-top-left-radius: 30px; border-top-right-radius: 30px; 
+}
+/* Book detail section layout */
+.book-detail-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin: 50px auto;
+  width: 85%;
+}
+
+/* Rectangular water bubble around book cover */
+.book-bubble {
+  width: 280px;
+  height: 380px;
+  border-radius: 25px; /* rectangular with rounded corners */
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.4), rgba(251,194,235,0.25));
+  backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 8px 20px rgba(255,255,255,0.5),
+              0 12px 30px rgba(0,0,0,0.25);
+  overflow: hidden;
+}
+
+.book-bubble img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* Description styling */
+.book-info {
+  flex: 1;
+  color: #fff;
+}
+
+.book-info h2 {
+  font-size: 1.8em;
+  background: linear-gradient(90deg,#fff,#fbc2eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.book-info .description {
+  margin: 20px 0;
+  font-size: 1.1em;
+  color: rgba(255,255,255,0.85);
+}
+
+.book-info .price {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #fbc2eb;
 }
 
 /* Responsive tweaks */
+@media (max-width: 768px) {
+  .book-detail-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .book-bubble {
+    margin-bottom: 20px;
+  }
+}
+
+/* Review Center */
+.review-center {
+  background: rgba(255,255,255,0.2); backdrop-filter: blur(20px);
+  border-radius: 25px; padding: 30px; margin: 40px auto; width: 80%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+.review-center h2 {
+  margin-bottom: 15px; font-size: 1.5em;
+  background: linear-gradient(90deg,#fff,#fbc2eb);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.review-form textarea {
+  width: 100%; padding: 12px; border-radius: 20px;
+  border: none; background: rgba(255,255,255,0.25); color: #fff;
+  margin-bottom: 10px;
+}
+.review-form input[type="file"] { margin-bottom: 10px; }
+.review-form button {
+  padding: 12px 20px; border-radius: 20px; background: #fbc2eb;
+  border: none; cursor: pointer; transition: 0.3s;
+}
+.review-form button:hover { transform: scale(1.05); box-shadow: 0 0 12px #fbc2eb; }
+.reviews { margin-top: 20px; }
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .book-detail-section { flex-direction: column; text-align: center; }
+  .book-bubble { margin-bottom: 20px; }
+}
 @media (max-width: 600px) {
   header { flex-direction: column; text-align: center; }
   .slideshow { height: 40vh; }
   .newsletter { width: 90%; }
 }
-@media (max-width: 768px) {
-  .slideshow .slide { height: 350px; }
-  .book-grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; }
-  .book-card h3 { font-size: 1rem; }
-}
 @media (max-width: 480px) {
-  header, footer { flex-direction: column; text-align: center; }
   .slideshow .slide { height: 250px; }
   .book-grid { grid-template-columns: 1fr; gap: 10px; }
-  .book-card h3 { font-size: 0.9rem; }
   .book-buttons a, .book-buttons button { width: 100%; margin-top: 5px; }
 }
 
-
 /* Crystallic Rose Rain Overlay */
 body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  pointer-events: none; /* ensures content is clickable */
-  background-image: radial-gradient(circle, rgba(255,111,145,0.4) 2px, transparent 2px);
-  background-size: 120px 120px;
-  animation: roseRain 12s linear infinite;
-  z-index: 0;
-}
-
-/* Animate the rain effect */
-@keyframes roseRain {
-  0% { background-position: 0 0; }
-  100% { background-position: 0 600px; }
-}
-
-/* Ensure content stays above the rain */
-header, .news-bar, .slideshow, .book-grid, .newsletter, .contact, .social-connect, footer {
-  position: relative;
-  z-index: 1;
-}
-/* Crystallic Rose Rain Overlay */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  pointer-events: none; /* don’t block content */
+  content: ""; position: fixed; top: 0; left: 0;
+  width: 100%; height: 100%; pointer-events: none;
   background-image: radial-gradient(circle, rgba(255,111,145,0.35) 3px, transparent 3px),
                     radial-gradient(circle, rgba(251,194,235,0.25) 2px, transparent 2px),
                     radial-gradient(circle, rgba(255,222,233,0.3) 4px, transparent 4px);
@@ -313,16 +303,11 @@ body::before {
   animation: crystalRain 18s linear infinite;
   z-index: 0;
 }
-
-/* Random drifting crystal rain */
 @keyframes crystalRain {
   0%   { background-position: 0 0, 50px -100px, -80px 0; }
   50%  { background-position: 40px 300px, -60px 200px, 100px 400px; }
   100% { background-position: -40px 600px, 80px 500px, -120px 700px; }
 }
-
-/* Keep content above the rain */
-header, .news-bar, .slideshow, .book-grid, .newsletter, .contact, .social-connect, footer {
-  position: relative;
-  z-index: 1;
+header, .news-bar, .slideshow, .book-grid, .newsletter, .contact, .social-connect, footer, .book-detail-section, .review-center {
+  position: relative; z-index: 1;
 }
