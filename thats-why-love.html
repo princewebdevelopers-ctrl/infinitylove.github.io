@@ -19,25 +19,23 @@
     </div>
     <div class="book-info">
       <h2>That’s Why I Love</h2>
-      <p class="description">" ඔයා ඇයි මට ආදරේ "</br>
-ඇය ඇසූ ප්‍රශ්නයේ කෙලවර</br> 
-මා නිරුත්තර විය.</br>
- </br>  
-" වෙලාව ආවම කියන්නම් "</br>
-එදා ප්‍රශ්නෙන් මම</br>
-කෙසේ හෝ ගැලවිය</br>
-</br>  
-නිරන්තරයෙන් ඔබ </br>
-ඇසූ ප්‍රශ්නෙට පිලිතුර</br>
-එය ම පමණක් විය.</br>
-</br>
-මේකයි උත්තර</br>ේ
-ඔයා විතරයි මට ආදරේ කරේ,</br>
-ඒ නිසයි මං ආදරේ!</br>
- </br>  
-ඒක නෙමේ දැන් ප්‍රශ්නේ</br>
-උත්තරේ කියන්නවත්</br>
-ඔයා මා එක්ක නැති එක</br></p>
+      <p class="description">
+        " ඔයා ඇයි මට ආදරේ "<br>
+        ඇය ඇසූ ප්‍රශ්නයේ කෙලවර<br> 
+        මා නිරුත්තර විය.<br><br>  
+        " වෙලාව ආවම කියන්නම් "<br>
+        එදා ප්‍රශ්නෙන් මම<br>
+        කෙසේ හෝ ගැලවිය<br><br>  
+        නිරන්තරයෙන් ඔබ <br>
+        ඇසූ ප්‍රශ්නෙට පිලිතුර<br>
+        එය ම පමණක් විය.<br><br>
+        මේකයි උත්තරේ<br>
+        ඔයා විතරයි මට ආදරේ කරේ,<br>
+        ඒ නිසයි මං ආදරේ!<br><br>  
+        ඒක නෙමේ දැන් ප්‍රශ්නේ<br>
+        උත්තරේ කියන්නවත්<br>
+        ඔයා මා එක්ක නැති එක<br>
+      </p>
       <p class="price">Rs.1200.00</p>
       <div class="book-buttons">
         <a href="https://wa.me/94707394526?text=Hi%20I%20want%20to%20buy%20Thats%20Why%20I%20Love%20book%0AName:%0AAdress:" target="_blank" class="buy-btn">Buy</a>
@@ -45,21 +43,66 @@
     </div>
   </section>
 
+  <!-- Review Center -->
   <section class="review-center" data-book="thats-why-love">
     <h2>💬 Share Your Thoughts</h2>
     <form class="review-form" id="reviewForm">
+      <input id="name" placeholder="Your name" required>
       <textarea id="reviewText" placeholder="Write your memories or ideas..." required></textarea>
-      <input type="file" id="reviewImage" accept="image/*">
       <button type="submit">Post Review</button>
     </form>
     <div class="reviews" id="reviewsList"></div>
   </section>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2616562064241582"
-     crossorigin="anonymous"></script>
 
   <footer>© 2026 SARA Book Store — All Rights Reserved</footer>
 
-  <script src="reviews.js"></script>
+  <!-- Firestore Integration -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-app.js";
+    import { getFirestore, collection, addDoc, onSnapshot } 
+      from "https://www.gstatic.com/firebasejs/12.15.0/firebase-firestore.js";
+
+    // 🔑 Your Firebase config
+    const firebaseConfig = {
+      apiKey: "AIzaSyDnbPN-mwZfbV-u12pen3wPjk81uH17VTs",
+      authDomain: "plot-line-9a8e6.firebaseapp.com",
+      projectId: "plot-line-9a8e6",
+      storageBucket: "plot-line-9a8e6.firebasestorage.app",
+      messagingSenderId: "616655804414",
+      appId: "1:616655804414:web:100f0fe3a40762bc2cd2af",
+      measurementId: "G-Z4RPK1FFV4"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    // 📝 Handle form submission
+    const form = document.getElementById("reviewForm");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const text = document.getElementById("reviewText").value;
+      if (!name || !text) return;
+
+      await addDoc(collection(db, "comments_thats_why_love"), {
+        name: name,
+        text: text,
+        timestamp: Date.now()
+      });
+
+      form.reset();
+    });
+
+    // 👀 Listen for new comments (real-time)
+    const reviewsList = document.getElementById("reviewsList");
+    onSnapshot(collection(db, "comments_thats_why_love"), (snapshot) => {
+      reviewsList.innerHTML = "";
+      snapshot.forEach((doc) => {
+        const c = doc.data();
+        reviewsList.innerHTML += `<p><b>${c.name}:</b> ${c.text}</p>`;
+      });
+    });
+  </script>
 </body>
 </html>
 
